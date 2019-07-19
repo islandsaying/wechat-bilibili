@@ -35,14 +35,14 @@
                     <!-- 播放量 -->
                     <view class="play-count-wrap">
                         <!-- 图标 -->
-                        <image mode="widthFix" src="../../sources/font-image/play.png"></image>
+                        <image mode="widthFix" src="../../icons/play.png"></image>
                         <!-- 数值 -->
                         <text>{{item.playCount}}</text>
                     </view>
                     <!-- 评论量 -->
                     <view class="comment-count-row">
                         <!-- 图标 -->
-                       <image mode="widthFix" src="../../sources/font-image/comment.png"></image>
+                       <image mode="widthFix" src="../../icons/comment.png"></image>
                         <!-- 数值 -->
                         <text>{{item.commentCount}}</text>
                     </view>  
