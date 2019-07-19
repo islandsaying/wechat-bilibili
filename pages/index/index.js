@@ -9,7 +9,9 @@ Page({
     //首页导航数据
     navList:[],
     // 轮播图数据
-    swiperList:[]
+    swiperList:[],
+    // 视频列表数据
+    videosList:[]
   },
     //点击首页导航按钮
     activeNav(e){
@@ -23,7 +25,6 @@ Page({
 
 
 
-
   //获取首页的导航数据
   getNavList(){
     let that = this;
@@ -31,7 +32,7 @@ Page({
     wx.request({
       url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/navList",
       success(res){
-        console.log(res);
+        //console.log(res);
         if(res.data.code===0){
           that.setData({
             navList:res.data.data.navList
@@ -47,10 +48,26 @@ Page({
     wx.request({
       url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/swiperList",
       success(res){
-        console.log(res);
+        //console.log(res);
         if(res.data.code===0){
           that.setData({
             swiperList:res.data.data.swiperList
+          })
+        }
+      }
+    })
+  },
+
+  //获取视频列表
+  getvideosList(){
+    let that = this;
+    wx.request({
+      url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videosList",
+      success(res){
+        //console.log(res);
+        if(res.data.code===0){
+          that.setData({
+            videosList:res.data.data.videosList
           })
         }
       }
@@ -65,6 +82,8 @@ Page({
     this.getNavList();
     //2 调用获取轮播图数据的函数
     this.getSwiperList();
+    //3 调用视频列表数据
+    this.getvideosList();
   },
 
   /**
