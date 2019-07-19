@@ -19,7 +19,7 @@ Page({
       this.setData({
         currentIndexNav:e.target.dataset.index
       })
-      console.log(e) //target dataset index都是event下面的子方法
+      //console.log(e) //target dataset index都是event下面的子方法
     },
 
 
