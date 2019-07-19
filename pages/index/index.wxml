@@ -2,11 +2,11 @@
     <!-- 公共的头部 -->
     <MyTitle></MyTitle>
     <!-- 首页导航 -->
-    <view class="nav_wrap">
+    <view class="nav-wrap">
         <!-- 自己滚动区域的组件 -->
         <scroll-view class="nav" scroll-x>
             <view bindtap="activeNav" data-index="{{index}}"
-            class="nav_item {{index===currentIndexNav?'active':''}}" 
+            class="nav-item {{index===currentIndexNav?'active':''}}" 
             wx:for="{{navList}}" 
             wx:key="{{index}}"
             >{{item.text}}</view>
@@ -23,32 +23,33 @@
         </swiper>
     </view>
     <!-- 视频列表 -->
-    <view class="video_wrap">
-        <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+    <view class="video-wrap">
+        <!-- 跳转url时传递id参数 -->
+        <navigator url="../detail/detail?id={{item.id}}" class="video-item" wx:for="{{videosList}}" wx:key="{{index}}">
             <!-- 图片容器 -->
-            <view class="video_img">
+            <view class="video-img">
                 <!-- 图片 -->
                 <image mode="widthFix" src="{{item.imgSrc}}"></image>
-                <!-- 播放量和评论 -->
-                <view class="video_info">
+                <!-- 播放量&评论量 -->
+                <view class="video-info">
                     <!-- 播放量 -->
-                    <view class="play_count_wrap">
+                    <view class="play-count-wrap">
                         <!-- 图标 -->
-                        <text class="fa fa-play-circle-o"></text>
+                        <image mode="widthFix" src="../../sources/font-image/play.png"></image>
                         <!-- 数值 -->
-                        <text class="play_count">{{item.playCount}}</text>
+                        <text>{{item.playCount}}</text>
                     </view>
                     <!-- 评论量 -->
-                    <view class="comment_count_row">
+                    <view class="comment-count-row">
                         <!-- 图标 -->
-                        <text class="fa fa-commenting-o"></text>
+                       <image mode="widthFix" src="../../sources/font-image/comment.png"></image>
                         <!-- 数值 -->
-                        <text class="comment_count">{{item.commentCount}}</text>
+                        <text>{{item.commentCount}}</text>
                     </view>  
                 </view>
             </view>
             <!-- 标题 -->
-            <view class="video_title">{{item.desc}}</view>
+            <view class="video-title">{{item.desc}}</view>
         </navigator>
     </view>
 </view>

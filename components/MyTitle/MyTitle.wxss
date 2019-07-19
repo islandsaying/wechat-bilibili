@@ -1,4 +1,4 @@
-.my_title{
+.my-title{
     display:flex;
     align-items:center;
     padding:10px;
@@ -7,31 +7,31 @@
 .logo{
     flex:7;
 }
-.logo_img{
+.logo-img{
     width: 140rpx;
     height: 60rpx;
 }
-.search_icon{
+.search-icon{
     flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.search_img{
+.search-img{
     width: 54rpx;
     height: 60rpx;
 }
-.user_icon{
+.user-icon{
     flex:2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.user_img{
+.user-img{
     width: 54rpx;
     height: 60rpx;
 }
-.down_app{
+.down-app{
     flex: 3;
     font-size: 30rpx;
     display: flex;
